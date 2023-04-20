@@ -1,5 +1,11 @@
+import { VerticalPlayer } from './components/VerticalPlayer'
+
 import './styles/global.css'
 
 export function App() {
-  return <h1>App</h1>
+  return (
+    <div className="w-full h-full flex flex-row items-center justify-center gap-8">
+      <VerticalPlayer />
+    </div>
+  )
 }
