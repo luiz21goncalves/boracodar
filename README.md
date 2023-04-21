@@ -1,5 +1,5 @@
-# Desafios BORA_CODAR
+# Desafios #boraCodar
 
 [veja os desafios](https://www.rocketseat.com.br/boracodar)
 
-- #01 player de musica
+- [#01 player de musica](https://github.com/luiz21goncalves/boracodar/blob/music-player)
