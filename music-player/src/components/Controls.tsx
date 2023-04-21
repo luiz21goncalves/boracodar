@@ -4,11 +4,11 @@ import { usePlayer } from '../contexts/PlayerContext'
 import { ButtonIcon } from './ButtonIcon'
 
 export function Controls() {
-  const { isPlaying, togglePlayer } = usePlayer()
+  const { isPlaying, togglePlayer, goToEnd, goToStart } = usePlayer()
 
   return (
     <div className="flex flex-row items-center justify-between">
-      <ButtonIcon>
+      <ButtonIcon onClick={goToStart}>
         <Rewind size={28} weight="fill" />
       </ButtonIcon>
 
@@ -20,7 +20,7 @@ export function Controls() {
         )}
       </ButtonIcon>
 
-      <ButtonIcon>
+      <ButtonIcon onClick={goToEnd}>
         <FastForward size={28} weight="fill" />
       </ButtonIcon>
     </div>

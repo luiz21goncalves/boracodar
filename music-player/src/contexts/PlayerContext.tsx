@@ -5,16 +5,31 @@ import {
   createContext,
   useCallback,
   useContext,
-  useState,
+  useEffect,
+  useReducer,
 } from 'react'
+
+import {
+  load,
+  pause,
+  play,
+  toEnd,
+  toStart,
+  update,
+} from '../reducers/player/actions'
+import { playerReduce } from '../reducers/player/reducers'
 
 type PlayerContextProviderProps = {
   children: ReactNode
 }
 
 type PlayerContextData = {
-  togglePlayer: () => void
   isPlaying: boolean
+  duration: number
+  elapsedtime: number
+  togglePlayer: () => void
+  goToStart: () => void
+  goToEnd: () => void
 }
 
 const PlayerContext = createContext({} as PlayerContextData)
@@ -22,14 +37,53 @@ const PlayerContext = createContext({} as PlayerContextData)
 export function PlayerContextProvider(props: PlayerContextProviderProps) {
   const { children } = props
 
-  const [isPlaying, setIsPlaying] = useState(false)
+  const [playerState, dispatch] = useReducer(playerReduce, {
+    isPlaying: false,
+    duration: 0,
+    elapsedtime: 0,
+  })
+
+  useEffect(() => {
+    dispatch(load())
+
+    const interval = setInterval(() => {
+      dispatch(update())
+    }, 1000)
+
+    return () => {
+      clearInterval(interval)
+    }
+  }, [])
+
+  const { isPlaying, duration, elapsedtime } = playerState
 
   const togglePlayer = useCallback(() => {
-    setIsPlaying((prevState) => !prevState)
+    if (playerState.isPlaying) {
+      dispatch(pause())
+    } else {
+      dispatch(play())
+    }
+  }, [playerState.isPlaying])
+
+  const goToStart = useCallback(() => {
+    dispatch(toStart())
+  }, [])
+
+  const goToEnd = useCallback(() => {
+    dispatch(toEnd())
   }, [])
 
   return (
-    <PlayerContext.Provider value={{ togglePlayer, isPlaying }}>
+    <PlayerContext.Provider
+      value={{
+        togglePlayer,
+        isPlaying,
+        duration,
+        elapsedtime,
+        goToEnd,
+        goToStart,
+      }}
+    >
       {children}
     </PlayerContext.Provider>
   )
