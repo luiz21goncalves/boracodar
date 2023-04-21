@@ -1,5 +1,6 @@
 import { Controls } from './Controls'
 import { SongDetails } from './SongDetails'
+import { Thumbnail } from './Thumbnail'
 import { Timeline } from './Timeline'
 
 type HorizontalPlayerProps = {
@@ -14,7 +15,7 @@ export function HorizontalPlayer(props: HorizontalPlayerProps) {
   return (
     <div className="flex flex-col p-7 items-center gap-6 bg-purple-900 rounded-lg">
       <div className="flex flex-row gap-7 items-center">
-        <img src="" alt="" className="w-24 h-24 rounded bg-purple-200" />
+        <Thumbnail size="sm" />
         <SongDetails />
       </div>
 
