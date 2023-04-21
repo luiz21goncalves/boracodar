@@ -8,7 +8,7 @@ export function VerticalPlayer() {
 
       <div className="flex flex-col">
         <strong className="font-bold text-2xl">Acorda Devinho</strong>
-        <span className="text-lg">Banda Rocketseat</span>
+        <span className="text-lg text-gray-50/60">Banda Rocketseat</span>
       </div>
 
       <Controls />

@@ -6,8 +6,8 @@ export function Timeline() {
       </div>
 
       <div className="w-full flex flex-row items-center justify-between">
-        <span>03:20</span>
-        <span>00:12</span>
+        <span className="font-bold text-sm text-gray-100/70">03:20</span>
+        <span className="font-bold text-sm text-gray-100/70">00:12</span>
       </div>
     </div>
   )

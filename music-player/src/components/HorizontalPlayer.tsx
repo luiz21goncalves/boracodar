@@ -16,8 +16,8 @@ export function HorizontalPlayer(props: HorizontalPlayerProps) {
         <img src="" alt="" className="w-24 h-24 rounded bg-purple-200" />
 
         <div className="flex flex-col">
-          <strong>Acorda Devinho</strong>
-          <span>Banda Rocketseat</span>
+          <strong className="font-bold text-2xl">Acorda Devinho</strong>
+          <span className="text-lg text-gray-50/60">Banda Rocketseat</span>
         </div>
       </div>
 
