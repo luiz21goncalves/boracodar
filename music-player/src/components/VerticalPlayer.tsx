@@ -5,7 +5,7 @@ import { Timeline } from './Timeline'
 
 export function VerticalPlayer() {
   return (
-    <div className="h-[32.5rem] p-9 flex flex-col justify-between bg-purple-900 rounded-lg">
+    <div className="h-[32.5rem] p-9 gap-6 flex flex-col items-center justify-between bg-purple-900 rounded-lg">
       <Thumbnail />
       <SongDetails />
       <Controls />

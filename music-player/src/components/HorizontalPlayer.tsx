@@ -14,7 +14,7 @@ export function HorizontalPlayer(props: HorizontalPlayerProps) {
 
   return (
     <div className="flex flex-col p-7 items-center gap-6 bg-purple-900 rounded-lg">
-      <div className="flex flex-row gap-7 items-center">
+      <div className="flex flex-col xs:flex-row gap-7 items-center">
         <Thumbnail size="sm" />
         <SongDetails />
       </div>

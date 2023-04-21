@@ -6,7 +6,7 @@ import './styles/global.css'
 
 export function App() {
   return (
-    <div className="w-full h-full flex flex-row items-center justify-center gap-8">
+    <div className="w-full min-h-screen px-8 py-16 gap-8 flex flex-col md:flex-row items-center justify-center">
       <PlayerContextProvider>
         <VerticalPlayer />
         <div className="flex flex-col gap-8">

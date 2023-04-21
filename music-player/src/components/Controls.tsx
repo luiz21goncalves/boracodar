@@ -7,7 +7,7 @@ export function Controls() {
   const { isPlaying, togglePlayer, goToEnd, goToStart } = usePlayer()
 
   return (
-    <div className="flex flex-row items-center justify-between">
+    <div className="w-full flex flex-row items-center justify-between">
       <ButtonIcon onClick={goToStart}>
         <Rewind size={28} weight="fill" />
       </ButtonIcon>
