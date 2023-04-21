@@ -1,6 +1,6 @@
 # Music Player
 
-![Thumbnail Music Player]('https://github.com/luiz21goncalves/boracodar/blob/assets/01-music-player.png)
+<img alt="Thumbnail Music Player" src="https://github.com/luiz21goncalves/boracodar/blob/main/assets/01-music-player.png?raw=true" />
 
 Simples player de música [link para o layout](https://www.figma.com/file/XnielIsj9qrix1qxAQLT9X/23boraCodar-Desafio-1/duplicate)
 
