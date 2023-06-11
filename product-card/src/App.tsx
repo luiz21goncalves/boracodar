@@ -1,6 +1,3 @@
 export function App() {
-
-  return (
-    <h1>Product Card</h1>
-  )
+  return <h1>Product Card</h1>
 }
