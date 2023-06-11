@@ -1,8 +1,22 @@
 .container {
   height: 250px;
+  position: relative;
 }
 
 .container img {
   width: 100%;
   height: 100%;
+}
+
+.float-button {
+  all: unset;
+  position: absolute;
+  top: 8px;
+  right: 50px;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.float-button:hover {
+  opacity: 0.6;
 }
