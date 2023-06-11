@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px
+}
+
+.container button {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 0.5px solid #271A45;
+  border-radius: 9999px;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+  font-weight: 400;
+  transition: all 200ms;
+}
+
+.container button:hover {
+  opacity: 0.6;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.content span {
+  font-size: 10px;
+  text-transform: uppercase;
+  line-height: 100%;
+  font-weight: 300;
+}
+
+.content h1 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 100%;
+  font-family: 'Crimson Pro', serif;
+}
+
+.content strong {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  opacity: 0.67;
+}
